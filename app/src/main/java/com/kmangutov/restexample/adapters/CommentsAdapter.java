@@ -22,7 +22,6 @@ import butterknife.InjectView;
 public class CommentsAdapter extends ArrayAdapter<Comment> {
 
     public CommentsAdapter(Context ctx, ArrayList<Comment> posts) {
-
         super(ctx, 0, posts);
     }
 

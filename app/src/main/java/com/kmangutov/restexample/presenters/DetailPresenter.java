@@ -21,7 +21,6 @@ public class DetailPresenter {
     ForumService mForum;
 
     public DetailPresenter(DetailActivity activity, ForumService forum) {
-
         mView = activity;
         mForum = forum;
     }
@@ -45,7 +44,6 @@ public class DetailPresenter {
 
                     @Override
                     public void onNext(Post post) {
-
                         mView.displayPost(post);
                     }
                 });

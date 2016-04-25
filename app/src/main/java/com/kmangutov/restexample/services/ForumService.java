@@ -22,8 +22,6 @@ public class ForumService {
     private ForumApi mForumApi;
 
     public ForumService() {
-
-
         RequestInterceptor requestInterceptor = new RequestInterceptor() {
             @Override
             public void intercept(RequestFacade request) {
@@ -41,26 +39,21 @@ public class ForumService {
     }
 
     public ForumApi getApi() {
-
         return mForumApi;
     }
 
     public interface ForumApi {
 
         @GET("/posts")
-        public Observable<List<Post>>
-            getPosts();
+        public Observable<List<Post>> getPosts();
 
         @GET("/posts/{id}")
-        public Observable<Post>
-            getPost(@Path("id") int postId);
+        public Observable<Post> getPost(@Path("id") int postId);
 
         @GET("/comments")
-        public Observable<List<Comment>>
-            getComments(@Query("postId") int postId);
+        public Observable<List<Comment>> getComments(@Query("postId") int postId);
 
         @POST("/posts")
-        public Observable<Post>
-            postPost(Post post);
+        public Observable<Post> postPost(Post post);
     }
 }
